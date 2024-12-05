@@ -55,7 +55,7 @@ export default function Hero() {
         ))}
       </ul>
       {/* Message Display */}
-      <div className="flex items-center justify-center  flex-col h-[50vh] text-center text-lg font-bold text-black text-2xl">
+      <div className="flex items-center justify-center  flex-col h-[50vh] text-center  font-bold text-black text-2xl">
        <img src={sademogy} alt="" />
         {message}
       </div>
