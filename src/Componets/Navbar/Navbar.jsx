@@ -8,7 +8,7 @@ export default function Navbar() {
       <div className="flex justify-between  items-center px-9  py-3 bg-[#FFFFFF]">
         <div className="nav-left  flex-col sm:flex sm:flex-row  sm:items-center sm:justify-center">
           <img src={logo} alt=""  className="w-[3.5rem]"/>
-          <p className="font-bold  md:text-[1.5rem] sm:text-[1rem]">Betmarket</p>
+          <p className="font-bold  md:text-[1.5rem] sm:text-[1rem] text-black">Betmarket</p>
         </div>
 
         <div className="nav-right  flex items-center justify-between gap-3" >
