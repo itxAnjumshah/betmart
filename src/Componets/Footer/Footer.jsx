@@ -4,7 +4,7 @@ import logo from "../../Assets/static/logo.png";
 export default function Footer() {
   return (
     <>
-      <div className="parent  ">
+      <div className="parent pl-12 pt-22  ">
         <hr />
         <div className="footer-inner md:flex md:justify-between md:p-12   ">
           <div className="left">
