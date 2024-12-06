@@ -2,6 +2,7 @@ import React from "react";
 import { cardData } from "../Dummy.jsx"; // Ensure correct path
 import Star from "../../Assets/static/star.png";
 import comment from "../../Assets/static/comment.png";
+import { Link } from "react-router-dom";
 
 export default function Card() {
   return (
@@ -18,7 +19,9 @@ export default function Card() {
               alt="avatar"
               className="w-12 h-12 rounded-full"
             />
-            <p className="font-bold text-gray-700">{card.title}</p>
+           <Link to="/details"> <p className="font-bold text-gray-700">{card.title} h</p> </Link>
+{/* here i link the  detail page */}
+
           </div>
           <hr className="border-black w-[80%] m-auto" />
 
