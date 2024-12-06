@@ -1,12 +1,12 @@
 import React, { useState } from 'react';
 import Activetab from "../../Assets/static/activeTab.png";
 import Inactivetab from "../../Assets/static/inactiveTab.png";
-import sademogy from "../../Assets/static/sad.png"
-
+import sademogy from "../../Assets/static/sad.png";
+import Card from '../Card/Card';
 
 export default function Hero() {
-  const [activeTab, setActiveTab] = useState('All'); // Active tab state
-  const [message, setMessage] = useState('Hello from All'); // Message state
+  const [activeTab, setActiveTab] = useState('All'); 
+  const [message, setMessage] = useState('Hello from All'); 
 
   const tabs = [
     'All',
@@ -20,8 +20,8 @@ export default function Hero() {
   ];
 
   const handleTabClick = (tab) => {
-    setActiveTab(tab); 
-    setMessage(`No Result for ${tab}`); 
+    setActiveTab(tab);
+    setMessage(tab === 'All' ? 'Hello from All' : `No Result for ${tab}`); 
   };
 
   return (
@@ -41,11 +41,11 @@ export default function Hero() {
                 ? 'bg-black text-white' 
                 : 'bg-[#F3F4F6] text-black' 
             }`}
-            onClick={() => handleTabClick(tab)} 
+            onClick={() => handleTabClick(tab)}
           >
             <span>
               <img
-                src={activeTab === tab ? Activetab : Inactivetab} 
+                src={activeTab === tab ? Activetab : Inactivetab}
                 alt={tab}
                 className="w-6 h-6"
               />
@@ -54,10 +54,24 @@ export default function Hero() {
           </li>
         ))}
       </ul>
-      {/* Message Display */}
-      <div className="flex items-center justify-center  flex-col h-[50vh] text-center  font-bold text-black text-2xl">
-       <img src={sademogy} alt="" />
-        {message}
+      
+      <div >
+        {activeTab === 'All' ? (
+          <>
+          <div className='p-12'>
+            <Card /> 
+
+</div>            
+
+          </>
+        ) : (
+          <>
+          <div className="flex items-center justify-center flex-col h-[50vh] text-center font-bold text-black text-2xl">
+            <img src={sademogy} alt="Sad Emoji" className="mb-4" />
+            {message}
+            </div>
+          </>
+        )}
       </div>
     </div>
   );
